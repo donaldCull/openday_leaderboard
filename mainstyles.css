@@ -1,0 +1,12 @@
+#myTable tbody {
+    counter-reset: sortabletablescope;
+}
+#myTable thead tr::before {
+    content: "";
+    display: table-cell;
+}
+#myTable tbody tr::before {
+    content: counter(sortabletablescope);
+    counter-increment: sortabletablescope;
+    display: table-cell;
+}
